@@ -112,7 +112,7 @@ function Login() {
     try {
 
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://unified-learning-progress-api.onrender.com/api/auth/login",
         {
           email,
           password
@@ -185,7 +185,7 @@ function Register() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/users",
+        "https://unified-learning-progress-api.onrender.com/api/users",
         {
           name,
           email,
@@ -251,7 +251,6 @@ function Register() {
 
 }
 
-
 function Dashboard() {
 
   const [dashboardData, setDashboardData] = useState(null);
@@ -277,7 +276,7 @@ function Dashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/users/dashboard/6a13578e5825602d369f21b1",
+        "https://unified-learning-progress-api.onrender.com/api/users/dashboard/6a13578e5825602d369f21b1",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -461,6 +460,7 @@ function Dashboard() {
   );
 
 }
+
 function App() {
 
   return (
