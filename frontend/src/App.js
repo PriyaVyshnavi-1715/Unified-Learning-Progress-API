@@ -275,8 +275,8 @@ function Dashboard() {
 
       const token = localStorage.getItem("token");
 
-      const response = await axios.get(
-        "https://unified-learning-progress-api.onrender.com/api/users/dashboard/6a13578e5825602d369f21b1",
+      await axios.post(
+        "https://unified-learning-progress-api.onrender.com/api/auth/register",
         {
           headers: {
             Authorization: `Bearer ${token}`
